@@ -55,7 +55,7 @@ func update_palette():
 	emit_signal("palette_updated", base, false)
 
 func set_texture(tex : Texture):
-	if Engine.get_frames_drawn() == 0: # Prevents palette resetting when the editor or game start
+	if texture == null and base != null: # Prevents resetting the palette and output texture when the texture is first loaded in a scene
 		texture = tex
 		return
 	if not tex:

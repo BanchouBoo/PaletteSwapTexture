@@ -19,6 +19,9 @@ class ReferencePoolVector2Array: # Arrays are passed as values, using this preve
 	func _init(first_point : Vector2):
 		array.append(first_point)
 
+func get_data():
+	return base.get_data()
+
 func set_palette(colors : PoolColorArray):
 	if swap_palette.size() != colors.size():
 		return
